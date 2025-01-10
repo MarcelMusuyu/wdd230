@@ -40,12 +40,12 @@
 
     <main class="container">
       <h1 class="first-item">WDD 230: Web Frontend Development</h1>
-      <div>
+      <div class="container-content">
         <section class="card">
           <h2>Learning Activities</h2>
 
-          <ul>
-            <li>
+          <ul class="link">
+            <li class="activities">
               Week 01:
               <a href="week01/holygrail.html">Layout</a>
               |<a href="week01/media-query.html">Media Query</a> |<a
@@ -62,7 +62,7 @@
         </section>
         <section class="card">
           <h2>Information</h2>
-          <ul>
+          <ul class="link">
             <li class="country">Lubumbashi, Democratic Republic of Congo</li>
             <li>
               <figure>
@@ -70,7 +70,7 @@
                   src="images/lightning_cloud_sun_icon.svg"
                   alt="Lubumbashi landscape"
                 />
-                <figcaption>26°F Runny</figcaption>
+                <figcaption>26°F Cloud-rain</figcaption>
               </figure>
             </li>
             <li id="visit-count"></li>
@@ -80,14 +80,13 @@
     </main>
 
     <footer>
-      <p>
-        ©️<span id="currentyear"></span>🌴 Nyembo Musuyu Marcel 🌴 Lubumbashi,
-
-        <figure>
-          <img src="images/flagdrc.png" alt="Lubumbashi landscape" />
-          <figcaption>Republic Democratic Of Congo</figcaption>
-        </figure>
+      <p class="footer">
+        ©️<span id="currentyear"></span>🌴 Nyembo Musuyu Marcel 🌴
       </p>
+      <figure>
+        <img src="images/flagdrc.png" alt="Lubumbashi landscape" />
+        <figcaption>Lubumbashi,Republic Democratic Of Congo</figcaption>
+      </figure>
       <p><em id="last"></em></p>
     </footer>
     <script src="scripts/getDate.js" defer></script>

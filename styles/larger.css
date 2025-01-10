@@ -16,7 +16,7 @@
 } */
 
 /* Larger Views ******************************/
-@media only screen and (min-width: 640px) {
+@media only screen and (max-width: 768px) {
   .navigation {
     display: flex;
   }
@@ -29,5 +29,25 @@
   }
   #menu {
     display: none;
+  }
+  .container,
+  .container-content {
+    display: grid;
+    grid-template-columns: 1fr; /* One column for mobile */
+    grid-template-rows: auto auto; /* Three rows for each item */
+    text-align: center;
+  }
+  .card h2 {
+    background-color: #014f86;
+    border: 1px solid #014f86;
+    border-radius: 5%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 15px;
+
+    color: white;
   }
 }

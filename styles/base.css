@@ -44,6 +44,7 @@ h1 {
 header span {
   padding-top: 10px;
   font-weight: bold;
+  margin-right: 20px;
   font-size: 40px;
 }
 
@@ -161,9 +162,12 @@ ul .active {
   justify-content: center;
   position: relative;
   align-items: center;
+
   gap: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(0, 0, 0, 0.1);
   border-radius: 5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
   flex-wrap: wrap;
   flex-direction: column;
   margin: 15px;
@@ -178,12 +182,12 @@ ul .active {
   top: 0;
   left: 0;
   right: 0;
-  padding-bottom: 15px;
 
+  padding: 10px 0; /* Add some padding */
   color: white;
 }
 .card ul {
-  margin: 20px;
+  margin-top: 50px;
 }
 
 figure {
@@ -192,13 +196,29 @@ figure {
 }
 
 figcaption {
-  margin-left: 10px; /* Adjust margin as needed */
-  text-align: left;
+  margin-left: 5px; /* Adjust margin as needed */
 }
 body footer p {
   padding-top: 10px;
   font-weight: 400;
+
   text-align: center;
+}
+.link {
+  display: block;
+}
+
+.activities {
+  display: flex;
+  gap: 10px;
+}
+.activities a {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+footer {
+  display: grid;
+  justify-content: center;
 }
 
 /* First styles */
