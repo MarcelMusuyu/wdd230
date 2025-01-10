@@ -30,7 +30,7 @@ body {
   display: grid;
   box-sizing: border-box;
   font-family: "Sansita", sans-serif;
-  grid-template-rows: 4;
+  grid-template-rows: auto auto auto auto;
 
   /* border: 2px solid var(--primary-color); */
 
