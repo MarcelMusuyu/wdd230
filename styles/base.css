@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary-color: #012a4a;
+  --secondary-color: #013a63;
+  --accent1-color: #01497c;
+  --accent2-color: #014f86;
+
+  --heading-font: "Roboto", serif;
+  --paragraph-font: "Roboto Flex", serif;
+
+  --nav-backgroud-color: var(--primary-color);
+  --nav-link-color: #ffffff;
+  --nav-hover-link-color: var(--nav-link-color);
+  --nav-hover-background-color: var(--accent2-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* The About page stylesheet */
+body {
+  max-width: 1000px;
+  padding: 20px;
+
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  box-sizing: border-box;
+  font-family: "Sansita", sans-serif;
+  grid-template-rows: 4;
+
+  /* border: 2px solid var(--primary-color); */
+
+  align-content: center;
+}
+h1 {
+  text-align: center;
+
+  font-family: var(--heading-font);
+}
+header span {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  place-items: center;
+  background-color: var(--primary-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #eee;
+}
+em {
+  color: rgb(224, 193, 15);
+  font-weight: 300;
+}
+nav {
+  margin-top: 2rem;
+  width: 101%;
+  background-color: var(--secondary-color);
+}
+nav a:hover {
+  color: darkgoldenrod;
+  background-color: var(--primary-color);
+  font-style: italic;
+  transform: scale(1.5);
+  text-decoration: underline;
+}
+
+.navigation {
+  display: flex;
+  flex: 1 1 auto;
+
+  align-items: center;
+}
+.country {
+  text-decoration: underline;
+}
+
+.navigation ul {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-evenly; /*Align and expand the element content dynamically in element space */
+  justify-items: center;
+
+  align-items: center;
+  align-content: center;
+}
+
+.navigation li {
+  list-style: none;
+}
+.navigation a {
+  display: block;
+  color: #eee;
+  font-weight: bold;
+  padding: 0.75rem;
+  text-decoration: none;
+  text-align: center;
+  /* 	border: 1px dotted cyan; */
+}
+
+footer {
+  background-color: var(--accent2-color);
+  color: #ffffff;
+}
+
+body main {
+  height: auto;
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2%;
+}
+
+main div {
+  display: grid;
+  grid-template-columns: 1fr minmax(250px, 25%);
+}
+
+body footer {
+  height: 100px;
+}
+
+.navigation a:hover,
+navigation a:active {
+  color: white;
+  transform: scale(1.1);
+  background-color: var(--primary-color);
+}
+
+ul .active {
+  background-color: var(--primary-color);
+  color: yellow;
+}
+/* margin: 0 0.25rem 0 0.5rem; */
+
+.container {
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto auto;
+}
+
+.first-item {
+  /* Occupy the first row */
+  padding: 10px;
+
+  margin: 10px;
+}
+
+.card {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.card h2 {
+  background-color: #014f86;
+  border: 1px solid #014f86;
+  border-radius: 5%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 15px;
+
+  color: white;
+}
+.card ul {
+  margin: 20px;
+}
+
+figure {
+  display: flex;
+  align-items: center;
+}
+
+figcaption {
+  margin-left: 10px; /* Adjust margin as needed */
+  text-align: left;
+}
+body footer p {
+  padding-top: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* First styles */
