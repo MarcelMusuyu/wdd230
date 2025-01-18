@@ -16,38 +16,31 @@
 } */
 
 /* Larger Views ******************************/
-@media only screen and (min-width: 640px) {
-  #menu {
-    display: none; /* hide hamburger button */
-  }
-
+@media only screen and (min-width: 768px) {
   .navigation {
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
-
-  .navigation a {
-    display: block;
+  .navigation li {
+    display: block; /* change state in small view */
     flex: 1 1 100%;
   }
-
-  .container-content {
-    display: grid;
-    grid-template-columns: auto auto; /* One column for mobile */
-
+  .navigation a {
     text-align: center;
   }
 
-  .card h2 {
-    background-color: #014f86;
-    border: 1px solid #014f86;
-    border-radius: 5%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding-bottom: 15px;
-
-    color: white;
+  #menu {
+    display: none;
   }
+  .services .icon-box {
+    height: 250px;
+  }
+
+  /* .membership {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto; 
+  } */
 }

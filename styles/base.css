@@ -50,21 +50,57 @@ header span {
 
 header {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto auto;
   place-items: center;
   background-color: var(--primary-color);
+
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #eee;
+}
+header img,
+#mode img {
+  border-radius: 50%;
+}
+
+nav {
+  width: 100%;
+  margin: 1rem auto;
+  background-color: var(--secondary-color);
+}
+
+/* small view navigation */
+#menu {
+  font-size: 3rem;
+  border: 0;
+  background: none;
+  color: #fff;
+  position: absolute;
+  top: 1.5rem;
+  right: 3rem;
+}
+
+/* #menu {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  background-color: #eee;
+} */
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "X";
 }
 em {
   color: white;
   font-weight: 300;
 }
-nav {
-  margin-top: 2rem;
-  width: 101%;
-  background-color: var(--secondary-color);
-}
+
 nav a:hover {
   color: darkgoldenrod;
   background-color: var(--primary-color);
@@ -75,35 +111,55 @@ nav a:hover {
 
 .navigation {
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  list-style: none;
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.navigation a {
+  display: none;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+/* .navigation {
+  display: flex;
   flex: 1 1 auto;
 
   align-items: center;
-}
+} */
 .country {
   text-decoration: underline;
 }
 
-.navigation ul {
+/* .navigation ul {
   display: flex;
   flex: 1 1 auto;
-  justify-content: space-evenly; /*Align and expand the element content dynamically in element space */
+  justify-content: space-evenly; /*Align and expand the element content dynamically in element space 
   justify-items: center;
 
   align-items: center;
   align-content: center;
-}
+} */
 
 .navigation li {
   list-style: none;
 }
-.navigation a {
+
+.navigation a:hover,
+navigation a:active {
+  color: white;
+  transform: scale(1.1);
+  background-color: var(--primary-color);
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
   display: block;
-  color: #eee;
-  font-weight: bold;
-  padding: 0.75rem;
-  text-decoration: none;
-  text-align: center;
-  /* 	border: 1px dotted cyan; */
 }
 
 footer {
@@ -130,13 +186,6 @@ body footer {
   height: 100px;
 }
 
-.navigation a:hover,
-navigation a:active {
-  color: white;
-  transform: scale(1.1);
-  background-color: var(--primary-color);
-}
-
 ul .active {
   background-color: var(--primary-color);
   color: yellow;
@@ -147,6 +196,11 @@ ul .active {
   display: grid;
   place-items: center;
   grid-template-rows: auto auto;
+}
+
+.container-content {
+  display: grid;
+  grid-template-columns: 1fr; /* One column for mobile */
 }
 
 .first-item {
@@ -202,12 +256,15 @@ body footer p {
   text-align: center;
 }
 .link {
-  display: block;
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: left;
+  justify-items: left;
 }
 
 .activities {
   display: flex;
-  gap: 10px;
+  gap: 2px;
 }
 .activities a {
   color: var(--primary-color);
