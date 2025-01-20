@@ -59,7 +59,7 @@ header {
 }
 header img,
 #mode img {
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 nav {
@@ -268,6 +268,7 @@ body footer p {
 }
 .activities a {
   color: var(--primary-color);
+
   font-weight: bold;
 }
 footer {
