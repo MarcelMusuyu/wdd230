@@ -10,6 +10,7 @@ last.innerHTML = `Last modification ${formattedDateTime}`;
 const year = document.querySelector("#currentyear");
 year.innerHTML = `${today.getFullYear()}`;
 
+// 2️⃣ Get the stored VALUE for the numVisits-ls KEY in localStorage if it exists. If the numVisits KEY is missing, then assign 0 to the numVisits variable.
 // Get the current visit count from local storage
 let visitCount = localStorage.getItem("visitCount") || 0;
 
@@ -17,18 +18,20 @@ let visitCount = localStorage.getItem("visitCount") || 0;
 if (!visitCount) {
   visitCount = 1;
 } else {
-  // Otherwise, increment the count
+  // 4️⃣ increment the number of visits by one.
   visitCount = parseInt(visitCount) + 1;
 }
 
 // Update the visit count in local storage
+// 5️⃣ store the new visit total into localStorage, visitCount
 localStorage.setItem("visitCount", visitCount);
 
-// Display the visit count (optional)
+// 1️⃣ Initialize display element variable
 const visitCountElement = document.getElementById("visit-count");
 if (visitCountElement) {
   visitCountElement.textContent = `Pages Visits: ${visitCount}.`;
 }
+
 links = document.querySelectorAll(".nav-link");
 links.forEach((link) => {
   link.addEventListener("click", (event) => {
