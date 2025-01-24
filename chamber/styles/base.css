@@ -229,7 +229,7 @@ img {
 }
 
 #hero .btn-get-started {
-  font-family: "Jost", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 1px;
@@ -240,7 +240,7 @@ img {
   transition: 0.5s;
   margin: 10px 0 0 60px;
   color: #fff;
-  background: #47b2e4;
+  background: rgb(5, 71, 102);
 }
 #hero h2,
 h2 {
@@ -635,7 +635,7 @@ figure {
   align-items: center;
 }
 .link-button {
-  background: #47b2e4;
+  background: rgb(5, 71, 102);
 
   border: 0;
 
@@ -776,6 +776,11 @@ input[type="text"]::placeholder {
   text-align: center;
   font-weight: bolder;
   border-radius: 100%;
+}
+
+.wheather li,
+.box figure figcaption {
+  color: #000;
 }
 
 .faq .faq-list a {
