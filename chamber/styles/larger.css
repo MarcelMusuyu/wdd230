@@ -38,9 +38,31 @@
     height: 250px;
   }
 
+  .container-sider {
+    grid-template-columns: 1fr;
+  }
+
+  /* .sidebar {
+    display: flex;
+    justify-content: space-between;
+  } */
   /* .membership {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto; 
   } */
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  .events {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Adjust column width for smaller screens */
+  }
+  .sidebar {
+    display: block;
+  }
+  
 }

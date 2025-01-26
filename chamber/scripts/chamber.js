@@ -190,8 +190,13 @@ recent.addEventListener("click", () => {
 });
 
 function createProjectCard(projects) {
-  document.querySelector(".card-container").innerHTML = "";
-  const container = document.querySelector(".card-container");
+  // document.querySelector(".card-container").innerHTML = "";
+  let container = document.querySelector(".card-container");
+  if (container) {
+    container.innerHTML = "";
+  } else {
+    container = document.createElement("div");
+  }
 
   projects.forEach((project) => {
     const card = document.createElement("div");
