@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Activity | WDD 230.</title>
+    <meta
+      name="description"
+      content="WDD 230 -  Web Frontend Development, Picture Album"
+    />
+    <meta name="author" content="Marcel Nyembo" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/form-larger.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <script src="scripts/form.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Login System</h1>
+    </header>
+    <main>
+      <form
+        method="get"
+        action="record.html"
+        class="form-group"
+        id="product-review-form"
+      >
+        <div id="formmessage" class="form-group1 content"></div>
+        <div class="form-group1 content">
+          <p class="smaller">*️⃣ Indicates a required field</p>
+        </div>
+        <div class="form-group1 content">
+          <label for="username">Username <em class="require">*️⃣</em></label>
+          <input
+            id="username"
+            required
+            placeholder="username"
+            name="username"
+            type="text"
+          />
+        </div>
+
+        <div class="form-group1 content">
+          <label for="password">Password <em class="require">*️⃣</em></label>
+          <input
+            id="password"
+            pattern="[a-zA-Z]{6,}"
+            placeholder="At least six characters long. No numbers."
+            required
+            name="passwrord"
+            type="password"
+          />
+        </div>
+        <div class="form-group1 content">
+          <label for="password-confirmation"
+            >Password Confirmation <em class="require">*️⃣</em></label
+          >
+          <input
+            id="password-confirmation"
+            pattern="[a-zA-Z]{6,}"
+            placeholder="At least six characters long. No numbers."
+            required
+            name="password-confirmation"
+            type="password"
+          />
+        </div>
+        <div class="form-group1 content">
+          <label for="email">Email <em class="require">*️⃣</em></label>
+          <input
+            id="email"
+            name="email"
+            pattern="[a-zA-Z0-9._%+\-]+@byui\.edu"
+            type="email"
+            placeholder="Please enter a valid email address"
+          />
+          <div class="error-message" id="emailError">
+            Invalid email format. Please use a @byui.edu address.
+          </div>
+        </div>
+
+        <div class="form-group1 content">
+          <label for="range">Range </label>
+          <input
+            type="range"
+            id="range"
+            name="range"
+            min="0"
+            max="10"
+            value="0"
+            step="1"
+            list="rangevalues"
+          />
+          <datalist id="rangevalues">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </datalist>
+        </div>
+        <div class="content">
+          <input id="send" value="Record Data" name="send" type="submit" />
+        </div>
+      </form>
+    </main>
+    <footer>
+      <p>
+        ©️<span id="currentyear"></span>🌴 Nyembo Musuyu Marcel 🌴 Lubumbashi,
+        Republic Democratic Of Congo
+      </p>
+      <p><em id="last"></em></p>
+    </footer>
+  </body>
+</html>

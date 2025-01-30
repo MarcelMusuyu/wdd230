@@ -1,0 +1,402 @@
+HTML CSS JS Result Skip Results Iframe EDIT ON
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table - WDD 230 - Web Frontend Development.</title>
+    <meta
+      name="description"
+      content="WDD 230 - Web Frontend Development, Nyembo Musuyu - course assignment portal"
+    />
+    <meta name="author" content="Marcel Nyembo Musuyu" />
+    <meta property="og:title" content="Welcome to Datatable Page" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1607269910784-aafe40882991?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+    <meta property="og:url" content="https://marcelmusuyu.github.io/wdd230/" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="styles/sortable.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Basic Sortable Table</h1>
+
+      <fieldset>
+        <legend>Live region</legend>
+        <button
+          id="off"
+          type="button"
+          class="liveliness toggleLiveRegion"
+          aria-pressed="true"
+          onclick="toggleLiveRegion(this.id);"
+        >
+          off
+        </button>
+        <button
+          id="polite"
+          type="button"
+          class="liveliness toggleLiveRegion"
+          aria-pressed="false"
+          onclick="toggleLiveRegion(this.id);"
+        >
+          polite
+        </button>
+        <button
+          id="assertive"
+          type="button"
+          class="liveliness toggleLiveRegion"
+          aria-pressed="false"
+          onclick="toggleLiveRegion(this.id);"
+        >
+          assertive
+        </button>
+        <p>
+          Live region output:<br />
+          <code id="FakeLiveRegion">empty</code>
+        </p>
+      </fieldset>
+
+      <div role="region" aria-labelledby="Cap" tabindex="0">
+        <table>
+          <caption id="Cap">
+            Books I May or May Not Have Read
+          </caption>
+          <thead>
+            <tr>
+              <th id="ColAuthor">
+                <button
+                  type="button"
+                  id="ColAuthorSortButton"
+                  onclick="toggleSort(this.id,'ColAuthor','1','SortNote')"
+                >
+                  <span>Author</span>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort asc"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-asc"
+                    ></use>
+                  </svg>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort des"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-des"
+                    ></use>
+                  </svg>
+                </button>
+              </th>
+              <th id="ColTitle">
+                <button
+                  type="button"
+                  id="ColTitleSortButton"
+                  onclick="toggleSort(this.id,'ColTitle','2','SortNote')"
+                >
+                  <span>Title</span>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort asc"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-asc"
+                    ></use>
+                  </svg>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort des"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-des"
+                    ></use>
+                  </svg>
+                </button>
+              </th>
+              <th id="ColYear">
+                <button
+                  type="button"
+                  id="ColYearSortButton"
+                  onclick="toggleSort(this.id,'ColYear','3','SortNote')"
+                >
+                  <span>Year</span>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort asc"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-asc"
+                    ></use>
+                  </svg>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort des"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-des"
+                    ></use>
+                  </svg>
+                </button>
+              </th>
+              <th id="ColISBN13">
+                <button
+                  type="button"
+                  id="ColISBN13SortButton"
+                  onclick="toggleSort(this.id,'ColISBN13','4','SortNote')"
+                >
+                  <span>ISBN-13</span>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort asc"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-asc"
+                    ></use>
+                  </svg>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort des"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-des"
+                    ></use>
+                  </svg>
+                </button>
+              </th>
+              <th id="ColISBN10">
+                <button
+                  type="button"
+                  id="ColISBN10SortButton"
+                  onclick="toggleSort(this.id,'ColISBN10','5','SortNote')"
+                >
+                  <span>ISBN-10</span>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort asc"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-asc"
+                    ></use>
+                  </svg>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort des"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-des"
+                    ></use>
+                  </svg>
+                </button>
+              </th>
+              <th id="ColMood">
+                <button
+                  type="button"
+                  id="ColMoodSortButton"
+                  onclick="toggleSort(this.id,'ColMood','6','SortNote')"
+                >
+                  <span>Mood</span>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort asc"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-asc"
+                    ></use>
+                  </svg>
+                  <svg
+                    viewBox="0 0 425 233.7"
+                    focusable="false"
+                    class="sort des"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="#icon-sort-des"
+                    ></use>
+                  </svg>
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Murasaki Shikibu<br />(<span lang="ja">紫 式部</span>, Lady
+                Murasaki)
+              </td>
+              <td>
+                The Tale of Genji<br />(<span lang="ja">源氏物語</span>, Genji
+                monogatari)
+              </td>
+              <td>1021</td>
+              <td>9780142437148</td>
+              <td>014243714X</td>
+              <td>😣</td>
+            </tr>
+            <tr>
+              <td lang="es">Miguel De Cervantes</td>
+              <td>The Ingenious Gentleman Don Quixote of La Mancha</td>
+              <td>1605</td>
+              <td>9783125798502</td>
+              <td>3125798507</td>
+              <td>😢</td>
+            </tr>
+            <tr>
+              <td lang="fr">Gabrielle-Suzanne Barbot de Villeneuve</td>
+              <td lang="fr">La Belle et la Bête</td>
+              <td>1740</td>
+              <td>9781910880067</td>
+              <td>191088006X</td>
+              <td>😂</td>
+            </tr>
+            <tr>
+              <td>Sir Isaac Newton</td>
+              <td>
+                The Method of Fluxions and Infinite Series: With Its Application
+                to the Geometry of Curve-lines
+              </td>
+              <td>1763</td>
+              <td>9781330454862</td>
+              <td>1330454863</td>
+              <td>🤔</td>
+            </tr>
+            <tr>
+              <td>Mary Shelley</td>
+              <td>Frankenstein; or, The Modern Prometheus</td>
+              <td>1818</td>
+              <td>9781530278442</td>
+              <td>1530278449</td>
+              <td>😨</td>
+            </tr>
+            <tr>
+              <td>Herman Melville</td>
+              <td>Moby-Dick; or, The Whale</td>
+              <td>1851</td>
+              <td>9781530697908</td>
+              <td>1530697905</td>
+              <td>😐</td>
+            </tr>
+            <tr>
+              <td>Emma Dorothy Eliza Nevitte Southworth</td>
+              <td>The Hidden Hand</td>
+              <td>1888</td>
+              <td>9780813512969</td>
+              <td>0813512964</td>
+              <td>🤐</td>
+            </tr>
+            <tr>
+              <td>F. Scott Fitzgerald</td>
+              <td>The Great Gatsby</td>
+              <td>1925</td>
+              <td>9780743273565</td>
+              <td>0743273567</td>
+              <td>😒</td>
+            </tr>
+            <tr>
+              <td>George Orwell</td>
+              <td>Nineteen Eighty-Four</td>
+              <td>1948</td>
+              <td>9780451524935</td>
+              <td>0451524934</td>
+              <td>😠</td>
+            </tr>
+            <tr>
+              <td>Nnedi Okorafor</td>
+              <td>Who Fears Death</td>
+              <td>2010</td>
+              <td>9780756406691</td>
+              <td>0008288747</td>
+              <td>😔</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="SortNote" class="visually-hidden"></div>
+
+      <p>
+        Used in the post
+        <a href="https://adrianroselli.com/2021/04/sortable-table-columns.html"
+          ><cite>Sortable Table Columns</cite></a
+        >.
+      </p>
+    </main>
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="SVGsprites">
+      <style>
+        .l {
+          fill: none;
+          stroke-width: 30;
+          stroke-miterlimit: 10;
+        }
+        .t {
+          stroke: none;
+        }
+      </style>
+      <defs>
+        <g id="icon-sort" role="presentation">
+          <path class="t" d="M20.4 233.7L212.5 41.6l192.1 192.1z" />
+          <path class="l" d="M414.4 223.1L212.5 21.2 10.6 223.1" />
+          <path class="t" d="M404.6 306L212.5 498.1 20.4 306z" />
+          <path class="l" d="M10.6 316.6l201.9 201.9 201.9-201.9" />
+        </g>
+        <g id="icon-sort-asc" role="presentation">
+          <path class="t" d="M20.4 233.7L212.5 41.6l192.1 192.1z" />
+          <path class="l" d="M414.4 223.1L212.5 21.2 10.6 223.1" />
+        </g>
+        <g id="icon-sort-des" role="presentation">
+          <path class="t" d="M404.6 0L212.5 192.1 20.4 0z" />
+          <path class="l" d="M10.6 10.6l201.9 201.9L414.4 10.6" />
+        </g>
+      </defs>
+    </svg>
+    <script src="scripts/sortable.js"></script>
+  </body>
+</html>

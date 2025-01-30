@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table - WDD 230 - Web Frontend Development.</title>
+    <meta
+      name="description"
+      content="WDD 230 - Web Frontend Development, Nyembo Musuyu - course assignment portal"
+    />
+    <meta name="author" content="Marcel Nyembo Musuyu" />
+    <meta property="og:title" content="Welcome to Datatable Page" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1607269910784-aafe40882991?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+    <meta property="og:url" content="https://marcelmusuyu.github.io/wdd230/" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4" class="title" scope="colgroup">
+            ACME Wildwest Services
+          </th>
+        </tr>
+        <tr>
+          <th scope="col" class="title"></th>
+          <th class="label" scope="col">Basic</th>
+          <th class="label" scope="col">Premium</th>
+          <th class="label" scope="col">Deluxe</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="col">
+          <td>Feature 1</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+        </tr>
+        <tr class="col">
+          <td>Feature 2</td>
+          <td>❌</td>
+          <td>✔️</td>
+          <td>✔️</td>
+        </tr>
+        <tr class="col">
+          <td>Feature 3</td>
+          <td>❌</td>
+          <td>❌</td>
+          <td>✔️</td>
+        </tr>
+      </tbody>
+      <caption>
+        Table 1: Account Feature Comparison
+      </caption>
+    </table>
+    <form>
+      <label>Country</label>
+      <select id="country" name="country">
+        <option value="US" selected>United States</option>
+        <option value="CA">Canada</option>
+        <option value="CD">Congo DR</option>
+      </select>
+    </form>
+
+    <script src="scripts/user-location.js"></script>
+  </body>
+</html>

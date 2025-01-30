@@ -1,0 +1,288 @@
+:root {
+  --text-color: #333;
+  --bg-color: #eee;
+  --col-header-color: #333;
+  --col-header-hover-color: #fff;
+}
+
+@media screen and (-ms-high-contrast: active),
+  screen and (forced-colors: active) {
+  :root {
+    --col-header-color: ButtonText;
+    --col-header-hover-color: WindowText;
+    --col-header-hover-color: CanvasText;
+  }
+}
+
+body {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.4;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+#SVGsprites {
+  display: none;
+}
+
+main {
+  margin: 0 0 2em 0;
+}
+
+label {
+  margin-right: 2em;
+}
+
+table {
+  margin: 1em 0 0 0;
+  border-collapse: collapse;
+  border: 0.1em solid rgba(0, 0, 0, 0.1);
+}
+
+caption {
+  text-align: left;
+  font-style: italic;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+}
+
+th,
+td {
+  padding: 0.25em 0.5em 0.25em 1em;
+  vertical-align: text-top;
+  text-align: left;
+  text-indent: -0.5em;
+}
+
+td.sorted {
+  background-color: rgba(255, 255, 0, 0.15);
+}
+
+th {
+  vertical-align: bottom;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+td:nth-of-type(2) {
+  font-style: italic;
+}
+
+th:nth-of-type(3),
+td:nth-of-type(3) {
+  text-align: right;
+}
+
+th:nth-of-type(6),
+td:nth-of-type(6) {
+  text-align: center;
+  min-width: 4em;
+}
+
+th {
+  padding: 0;
+  text-indent: 0;
+}
+
+th > button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  padding: 0.25em 0.5em 0.25em 1em;
+  white-space: nowrap;
+  width: 100%;
+  min-width: 4.5em;
+  display: grid;
+  grid-template-columns: minmax(2em, max-content) 0.65em auto;
+  grid-template-areas: "t a x" "t d x";
+}
+
+th > button > span {
+  grid-area: t;
+  padding-right: 0.5em;
+}
+
+th > button > .asc {
+  grid-area: a;
+  align-self: center;
+}
+
+th > button > .des {
+  grid-area: d;
+  align-self: center;
+}
+
+th > button::after {
+  content: "";
+  grid-area: x;
+}
+
+th > button:focus,
+th > button:hover {
+  color: #fff;
+  color: var(--col-header-hover-color);
+  background-color: #666;
+  outline: none;
+}
+
+th > button svg.sort {
+  fill: transparent;
+  stroke: var(--col-header-color);
+  max-width: 0.65em;
+  max-height: 1.2em;
+}
+
+[aria-sort="ascending"] > button svg.asc {
+  stroke: var(--col-header-color);
+  fill: var(--col-header-color);
+}
+
+[aria-sort="descending"] > button svg.des {
+  stroke: var(--col-header-color);
+  fill: var(--col-header-color);
+}
+
+th:focus > button svg.sort,
+th:hover > button svg.sort,
+th:focus-within > button svg.sort {
+  stroke: var(--col-header-hover-color);
+}
+
+[aria-sort="ascending"] > button:focus svg.asc,
+[aria-sort="ascending"] > button:hover svg.asc,
+[aria-sort="descending"] > button:focus svg.des,
+[aria-sort="descending"] > button:hover svg.des {
+  stroke: var(--col-header-hover-color);
+  fill: var(--col-header-hover-color);
+}
+
+/* Method to visually hide something but still */
+/* make it available to screen readers */
+.visually-hidden {
+  position: absolute;
+  top: auto;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
+
+/* Scrolling, responsive table container */
+/* https://adrianroselli.com/2020/11/under-engineered-responsive-tables.html */
+
+[role="region"][aria-labelledby][tabindex] {
+  overflow: auto;
+}
+
+[role="region"][aria-labelledby][tabindex]:focus {
+  outline: 0.1em solid rgba(0, 0, 0, 0.1);
+}
+
+/* Scrolling Visual Cue */
+
+[role="region"][aria-labelledby][tabindex] {
+  background: linear-gradient(
+      to right,
+      var(--bg-color) 30%,
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(to right, rgba(255, 255, 255, 0), var(--bg-color) 70%) 0
+      100%,
+    radial-gradient(
+      farthest-side at 0% 50%,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(
+        farthest-side at 100% 50%,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+      )
+      0 100%;
+  background-repeat: no-repeat;
+  background-color: var(--bg-color);
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-position: 0 0, 100%, 0 0, 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* Live region toggle buttons*/
+/* .liveliness {
+  border: .1em solid #11c;
+  border-radius: .25em;
+  padding: .25em .5em;
+  color: #fff;
+  background: #11c;
+  display: inline-block;
+  width: auto;
+  text-shadow: 1px 1px 1px #000;
+  font: inherit;
+  font-size: 1rem;
+  margin: .2em .1em;
+}
+
+.liveliness:focus, .liveliness:hover {
+  color: #11c;
+  background: #eee;
+  text-shadow: none;
+  outline: none;
+}
+
+.liveliness[aria-pressed]::before {
+  content: "⊘ ";
+}
+
+.liveliness[aria-pressed="true"]::before {
+  content: "✔ ";
+}
+
+.liveliness[aria-pressed="true"] {
+  border-color: #000;
+} */
+
+button[aria-pressed] {
+  border: 0.1em solid #11c;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: #fff;
+  background: #11c;
+  display: inline-block;
+  width: auto;
+  text-shadow: 1px 1px 1px #000;
+  font: inherit;
+  font-size: 1rem;
+  margin: 0.2em 0.1em;
+}
+
+button[aria-pressed]:focus,
+button[aria-pressed]:hover {
+  outline: 0.2em solid #99f;
+  /*   outline-offset: .1em; */
+}
+
+button[aria-pressed]::before {
+  content: "⊘ ";
+}
+
+button[aria-pressed="true"]::before {
+  content: "✔ ";
+}
+
+button[aria-pressed="true"],
+button:not([aria-pressed]):active {
+  color: #11c;
+  background: #eee;
+  text-shadow: none;
+  border-color: #000;
+}

@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary-color: #012a4a;
+  --secondary-color: #013a63;
+  --accent1-color: #01497c;
+  --accent2-color: #014f86;
+
+  --heading-font: "Roboto", serif;
+  --paragraph-font: "Roboto Flex", serif;
+
+  --nav-backgroud-color: var(--primary-color);
+  --nav-link-color: #ffffff;
+  --nav-hover-link-color: var(--nav-link-color);
+  --nav-hover-background-color: var(--accent2-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* The About page stylesheet */
+body {
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  box-sizing: border-box;
+  font-family: "Sansita", sans-serif;
+  grid-column: 3;
+  gap: 5px;
+  /* border: 2px solid var(--primary-color); */
+
+  align-content: center;
+}
+h1 {
+  text-align: center;
+  font-family: var(--heading-font);
+}
+header h1 {
+  padding-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+header {
+  background-color: var(--primary-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #eee;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+body header {
+  grid-column: 1/3;
+  grid-row: 1;
+}
+body main {
+  height: auto;
+  width: 100%;
+
+  grid-column: 1/3;
+  grid-row: 2;
+}
+input {
+  font-size: 18px; /* Adjust the value to your desired font size */
+}
+
+form {
+  height: auto;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  border-radius: 2%;
+  background-color: rgb(238, 241, 243);
+  margin: 0 auto;
+}
+
+.content {
+  width: 100%;
+
+  padding: 10px;
+}
+body footer {
+  height: 100px;
+
+  grid-column: 1/3;
+  grid-row: 3;
+}
+body footer p {
+  padding-top: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.form-group1 {
+  display: grid;
+  place-items: center;
+  /* Align items to the left */
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+
+label {
+  place-self: self-start;
+  margin-left: 25px;
+}
+.rating {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+input[type="radio"] {
+  width: 15px;
+  height: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="range"] {
+  width: 90%;
+  padding: 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  padding: 15px;
+
+  width: 90%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.optional {
+  color: #012a4a;
+  font-weight: 600;
+}
+
+.require {
+  color: red;
+}
+
+#rangevalue {
+  font-size: 2rem;
+  color: navy;
+}
+#rangevalues {
+  display: flex;
+  margin: 0 0 0 25px;
+  width: 90%;
+}
+
+#rangevalues option {
+  flex: 1 1 auto;
+}
+
+.smaller {
+  font-size: 11px;
+  position: absolute;
+
+  right: 10px;
+}
+
+.error-message {
+  color: red;
+  display: none; /* Initially hidden */
+}
+
+#formmessage {
+  visibility: none;
+  margin: 10px;
+  padding: 0.5rem;
+  color: red;
+}

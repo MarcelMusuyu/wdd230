@@ -1,0 +1,12 @@
+@media screen and (max-width: 500px) {
+  /* CSS rules for mobile devices */
+  body {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  input,
+  select {
+    font-size: 12px; /* Adjust the value to your desired font size */
+  }
+}
