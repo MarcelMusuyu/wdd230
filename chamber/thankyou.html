@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chamber of Commerce | WDD 131.</title>
+    <meta
+      name="description"
+      content="WDD 230 - The Chamber of Commerce Project"
+    />
+    <meta name="author" content="Marcel Nyembo" />
+    <meta
+      property="og:title"
+      content="Welcome To The Chamber of Commerce Home page"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1607269910784-aafe40882991?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+    <meta
+      property="og:url"
+      content="https://marcelmusuyu.github.io/wdd230/chamber"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+  </head>
+
+  <body>
+    <p>Form Load Time: <span id="displayLoadTime"></span></p>
+
+    <script>
+      const displayLoadTimeElement = document.getElementById("displayLoadTime");
+      const storedLoadTime = localStorage.getItem("formLoadTime");
+
+      if (storedLoadTime) {
+        displayLoadTimeElement.textContent = storedLoadTime;
+      } else {
+        displayLoadTimeElement.textContent = "Load time not available.";
+      }
+    </script>
+  </body>
+</html>

@@ -42,6 +42,8 @@
     grid-template-columns: 1fr;
   }
 
+ 
+
   /* .sidebar {
     display: flex;
     justify-content: space-between;
@@ -64,5 +66,14 @@
   .sidebar {
     display: block;
   }
-  
+
+   .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+    .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
 }
