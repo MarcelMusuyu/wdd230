@@ -17,7 +17,7 @@ if ("geolocation" in navigator) {
 
       // Option 1: Reverse Geocoding (API Call)
       fetch(
-        `https://api.opencagedata.com/geocode/v1/json?q=${encodedLatitude}+${encodedLongitude}&key=YOUR_API_KEY`
+        `https://api.opencagedata.com/geocode/v1/json?q=${encodedLatitude}+${encodedLongitude}&key=apiKey`
       ) // Replace with a geocoding API of your choice
         .then((response) => response.json())
         .then((data) => {
