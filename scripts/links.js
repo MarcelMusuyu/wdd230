@@ -28,6 +28,7 @@ function displayLinks(data) {
     const activities = document.createElement("li");
 
     activities.setAttribute("class", "activities");
+    
     activities.textContent = `${week.week}: `;
     week.links.forEach((link) => {
       const task = document.createElement("a");

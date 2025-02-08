@@ -261,6 +261,9 @@ body footer p {
   display: flex;
   gap: 2px;
 }
+.activities::before {
+  content: "📌";
+}
 .activities a {
   color: var(--primary-color);
 
