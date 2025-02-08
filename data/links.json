@@ -5,7 +5,7 @@
       "links": [
         {
           "url": "week01/holygrail.html",
-          "title": "HG Layout"
+          "title": "Grail"
         },
         {
           "url": "week01/media-query.html",
@@ -26,11 +26,11 @@
         },
         {
           "url": "https://codepen.io/MarcelMusuyu/pen/ogvMvYG",
-          "title": "Hamburger Manu"
+          "title": "Hamburger"
         },
         {
           "url": "week02/bom.html",
-          "title": "Book of Mormon"
+          "title": "BOM-10"
         }
       ]
     },
@@ -43,15 +43,15 @@
         },
         {
           "url": "week03/lazyload.html",
-          "title": "Lazy Images Loading"
+          "title": "LazyLoading"
         },
         {
           "url": "week03/responsive-images.html",
-          "title": "Responsive Images"
+          "title": "srcss"
         },
         {
           "url": "week03/bom.html",
-          "title": "Book of Mormon"
+          "title": "BOM-10"
         }
       ]
     },
@@ -64,7 +64,7 @@
         },
         {
           "url": "week04/images/combinator.png",
-          "title": "Combinator Exercices"
+          "title": "Combinator"
         },
         {
           "url": "week04/tablebuild.html",
@@ -85,7 +85,7 @@
         },
         {
           "url": "week05/new-ward-members.json",
-          "title": "JSon File"
+          "title": "JSon"
         },
         {
           "url": "week05/prophets.html",

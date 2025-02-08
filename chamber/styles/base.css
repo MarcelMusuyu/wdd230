@@ -1282,3 +1282,98 @@ form {
   display: grid;
   place-items: center;
 }
+
+/* Styling The directory Page*/
+
+.card-directory .menu {
+  margin: 1rem auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  background-color: #bed;
+  text-align: center;
+}
+
+.card-directory .menu button {
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.card-directory section {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  background-color: #eee;
+}
+
+.card-directory .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5px;
+  align-items: center;
+}
+
+.card-directory .grid section {
+  text-align: center;
+}
+
+.card-directory .grid img {
+  border: 1px solid #fff;
+  box-shadow: 0 0 10px #333;
+}
+
+.card-directory .grid section > * {
+  margin: 0.1rem;
+}
+
+.card-directory .grid h3 {
+  font-family: "Caveat", cursive;
+}
+
+.card-directory .list {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-directory .list section {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin: 0;
+  padding: 0.25rem;
+}
+
+.card-directory .list section > * {
+  margin: 0 1rem;
+}
+
+.card-directory .list section img {
+  display: none; /* smaller viewports only */
+}
+
+.card-directory .list section h3 {
+  font-size: 1rem;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+.card-directory .list section:nth-child(even) {
+  background-color: #bed;
+}
+
+.card-directory section h3 {
+  font-size: 1.5rem;
+}
+
+.card-directory section p {
+  font-weight: 600;
+  font-size: smaller;
+}
+
+.card-directory section a {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 0.85rem;
+  color: navy;
+  letter-spacing: 1.1pt;
+}
+
+.card-directory img {
+  height: 75px;
+  max-width: 100%; /* Images are jerks - Seattle*/
+}
