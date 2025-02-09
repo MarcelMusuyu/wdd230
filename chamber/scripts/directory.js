@@ -27,17 +27,18 @@ function showList() {
   display.classList.remove("grid");
 }
 
+const article = document.querySelector(".grid");
 const baseURL = "https://marcelmusuyu.github.io/wdd230/chamber";
-const linksURL = `${baseURL}/data/members.json`;
+const membersURL = `${baseURL}/data/members.json`;
 
 ///const content = document.querySelector(".link");
 
-async function getLinks() {
+async function getMembers() {
   try {
-    const response = await fetch(linksURL);
+    const response = await fetch(membersURL);
     if (response.ok) {
       const members = await response.json();
-      displayLinks(members);
+      displayMembers(members);
     } else {
       throw Error(await response.text());
     }
@@ -46,24 +47,32 @@ async function getLinks() {
   }
 }
 
-function displayLinks(data) {
+function displayMembers(data) {
   console.log(data);
-
-  //   data.weeks.forEach((week) => {
-  //     // console.log(week.week);
-  //     const activities = document.createElement("li");
-
-  //     activities.setAttribute("class", "activities");
-
-  //     activities.textContent = `${week.week}: `;
-  //     week.links.forEach((link) => {
-  //       const task = document.createElement("a");
-  //       task.innerHTML = `&nbsp;${link.title}|&nbsp;`;
-  //       task.setAttribute("href", link.url);
-  //       activities.appendChild(task);
-  //       // console.log(`${link.title} ${link.url}`);
-  //     });
-  //     content.appendChild(activities);
-  //   });
+  data.forEach((member) => {
+    const section = document.createElement("section");
+    const img = document.createElement("img");
+    const name = document.createElement("h2");
+    const description = document.createElement("p");
+    description.innerHTML = `💸$ ${member.capital} <br>${member.description} <br>${member.addresses}`;
+    const socialMedia = document.createElement("ul");
+    const twitter = document.createElement("li");
+    twitter.textContent = member.socialMedia.twitter;
+    socialMedia.appendChild(twitter);
+    name.textContent = member.name;
+    const website = document.createElement("a");
+    website.setAttribute("href", member.website);
+    website.setAttribute("class", "btn-get-started scrollto");
+    website.setAttribute("target", "_blank");
+    website.textContent = "Learn More";
+    img.setAttribute("src", member.logo);
+    img.setAttribute("alt", member.description);
+    section.appendChild(img);
+    section.appendChild(name);
+    section.appendChild(description);
+    section.appendChild(website);
+    section.appendChild(socialMedia);
+    article.appendChild(section);
+  });
 }
-getLinks();
+getMembers();
