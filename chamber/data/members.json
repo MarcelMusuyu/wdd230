@@ -1,0 +1,120 @@
+[
+  {
+    "name": "HeartX",
+    "addresses": "Lubumbashi,34 Luano Airport.",
+    "description": "Creating an immersive VR platform for interactive and personalized learning experiences.",
+    "phone": "+243-394-3974",
+    "logo": "images/directory/Startup19.jpeg",
+    "membership": "Bronze Membership",
+    "capital": 570000,
+    "website": "https://comingsoon.eduverse.com",
+    "socialMedia": {
+      "twitter": "https://twitter.com/eduversevr"
+    }
+  },
+  {
+    "name": "InternHero",
+    "addresses": "Lubumbashi,85 Luano Airport.",
+    "description": "A startup developing innovative technologies for renewable energy and eco-friendly products..",
+    "phone": "+243-834-3974",
+    "logo": "images/directory/Startup9.jpeg",
+    "membership": "Silver Membership",
+    "capital": 586000,
+    "website": "https://greenifyinc.com",
+    "socialMedia": {
+      "facebook": "https://facebook.com/greenifyinc",
+      "twitter": "https://twitter.com/greenifyinc",
+      "linkedin": "https://www.linkedin.com/company/greenifyinc"
+    }
+  },
+  {
+    "name": "BIO",
+    "addresses": "Lubumbashi,851 Luano Airport.",
+    "description": "A startup creating an adaptive learning platform for K-12 students.",
+    "phone": "+243-844-3974",
+    "logo": "images/directory/Startup10.jpeg",
+    "membership": "Gold Membership",
+    "capital": 953940,
+    "website": "https://edufy.com",
+    "socialMedia": {
+      "facebook": "https://facebook.com/edufy",
+      "twitter": "https://twitter.com/edufy",
+      "linkedin": "https://www.linkedin.com/company/edufy"
+    }
+  },
+  {
+    "name": "ListSLink",
+    "addresses": "Lubumbashi,824 Luano Airport.",
+    "description": "A startup creating an adaptive learning platform for K-12 students.",
+    "phone": "+243-824-3974",
+    "logo": "images/directory/Startup16.jpeg",
+    "membership": "NP Membership",
+    "capital": 865000,
+    "website": "https://edufy.com",
+    "socialMedia": {
+      "facebook": "https://facebook.com/edufy",
+      "twitter": "https://twitter.com/edufy",
+      "linkedin": "https://www.linkedin.com/company/edufy"
+    }
+  },
+  {
+    "name": "Reinvest24",
+    "addresses": "Lubumbashi,95 Luano Airport.",
+    "description": "A startup creating an adaptive learning platform for K-12 students.",
+    "phone": "+243-994-7274",
+    "logo": "images/directory/Startup13.jpeg",
+    "membership": "NP Membership",
+    "capital": 894000,
+    "website": "https://edufy.com",
+    "socialMedia": {
+      "facebook": "https://facebook.com/edufy",
+      "twitter": "https://twitter.com/edufy",
+      "linkedin": "https://www.linkedin.com/company/edufy"
+    }
+  },
+  {
+    "name": "EdTech Evidence Group",
+    "addresses": "Lubumbashi,857 Luano Airport.",
+    "description": "A startup creating an adaptive learning platform for K-12 students.",
+    "phone": "+243-824-8624",
+    "logo": "images/directory/Startup14.jpeg",
+    "membership": "Gold Membership",
+    "capital": 86000,
+    "website": "https://edufy.com",
+    "socialMedia": {
+      "facebook": "https://facebook.com/edufy",
+      "twitter": "https://twitter.com/edufy",
+      "linkedin": "https://www.linkedin.com/company/edufy"
+    }
+  },
+  {
+    "name": "Sell & Sign Startup",
+    "addresses": "Lubumbashi,349 Luano Airport.",
+    "description": "A startup creating an adaptive learning platform for K-12 students.",
+    "phone": "+243-674-3972",
+    "logo": "images/directory/Startup4.jpeg",
+    "membership": "Silver Membership",
+    "capital": 946000,
+    "website": "https://edufy.com",
+    "socialMedia": {
+      "facebook": "https://facebook.com/edufy",
+      "twitter": "https://twitter.com/edufy",
+      "linkedin": "https://www.linkedin.com/company/edufy"
+    }
+  },
+  {
+    "name": "Avisa Smart Hospital",
+    "addresses": "Lubumbashi,962 Luano Airport.",
+    "description": "A startup creating an adaptive learning platform for K-12 students.",
+    "phone": "+243-864-3974",
+    "logo": "images/directory/Startup20.jpeg",
+    "membership": "Bronze Membership",
+    "capital": 346000,
+    "website": "https://edufy.com",
+    "socialMedia": {
+      "facebook": "https://facebook.com/edufy",
+      "twitter": "https://twitter.com/edufy",
+      "linkedin": "https://www.linkedin.com/company/edufy"
+    }
+  }
+]

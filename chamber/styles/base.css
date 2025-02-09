@@ -228,7 +228,7 @@ img {
   display: block;
 }
 
-#hero .btn-get-started {
+.btn-get-started {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -1289,7 +1289,7 @@ form {
   margin: 1rem auto;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
-  background-color: #bed;
+  background-color: #1e88e5;
   text-align: center;
 }
 
@@ -1306,13 +1306,17 @@ form {
 
 .card-directory .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
   grid-gap: 5px;
   align-items: center;
 }
-
+.directory h2 {
+  color: var(--primary-color);
+}
 .card-directory .grid section {
   text-align: center;
+  width: 100%;
 }
 
 .card-directory .grid img {
@@ -1369,11 +1373,17 @@ form {
 .card-directory section a {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 0.85rem;
-  color: navy;
+
   letter-spacing: 1.1pt;
 }
 
 .card-directory img {
-  height: 75px;
+  height: auto;
   max-width: 100%; /* Images are jerks - Seattle*/
+}
+.card-directory .btn-link {
+  font-family: "Caveat", cursive;
+  font-weight: bold;
+  font-size: 15px;
+  color: #000;
 }
