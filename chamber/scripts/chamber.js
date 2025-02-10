@@ -154,41 +154,6 @@ home.addEventListener("click", () => {
   createProjectCard(startupProjects);
 });
 
-const expensive = document.querySelector("#expensive");
-expensive.addEventListener("click", () => {
-  createProjectCard(
-    startupProjects.filter((startup) => {
-      // Extract the year from the dedicated property
-
-      // Filter based on the year (replace 1983 with your desired year)
-      return startup.funding.amount > 500000;
-    })
-  );
-});
-const cheap = document.querySelector("#cheap");
-
-cheap.addEventListener("click", () => {
-  createProjectCard(
-    startupProjects.filter((startup) => {
-      // Extract the year from the dedicated property
-
-      // Filter based on the year (replace 1983 with your desired year)
-      return startup.funding.amount <= 500000;
-    })
-  );
-});
-
-const recent = document.querySelector("#new");
-recent.addEventListener("click", () => {
-  createProjectCard(
-    startupProjects.filter((startup) => {
-      const date1Obj = new Date(startup.funding.date);
-      const date2Obj = new Date("2024-10-1");
-      return date1Obj > date2Obj;
-    })
-  );
-});
-
 function createProjectCard(projects) {
   // document.querySelector(".card-container").innerHTML = "";
   let container = document.querySelector(".card-container");
@@ -313,4 +278,124 @@ document.querySelectorAll(".link-button").forEach((link) => {
 
     console.log();
   });
+});
+
+const article =
+  document.querySelector(".grid") || document.createElement("article");
+const baseURL = "https://marcelmusuyu.github.io/wdd230/chamber";
+const membersURL = `${baseURL}/data/members.json`;
+let members;
+
+///const content = document.querySelector(".link");
+
+async function getMembers() {
+  try {
+    const response = await fetch(membersURL);
+    if (response.ok) {
+      members = await response.json();
+      displayMembers(members);
+    } else {
+      throw Error(await response.text());
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function displayMembers(data) {
+  data.forEach((member) => {
+    const section = document.createElement("section");
+    const img = document.createElement("img");
+    const name = document.createElement("h2");
+    const description = document.createElement("p");
+    description.innerHTML = `💸$ ${member.capital} <br><br>🥇🥈🏅${member.membership}<br>${member.description} <br><em class="map">${member.addresses}</em>`;
+    const socialMedia = document.createElement("ul");
+    socialMedia.setAttribute("class", "socialMedia");
+    const twitter = document.createElement("li");
+    const twitterLink = document.createElement("a");
+    twitterLink.setAttribute("class", "social");
+    twitterLink.setAttribute("href", member.socialMedia.twitter);
+    twitter.appendChild(twitterLink);
+    twitter.setAttribute("class", "twitter");
+    socialMedia.appendChild(twitter);
+    const facebook = document.createElement("li");
+    const faceLink = document.createElement("a");
+    faceLink.setAttribute("class", "social");
+    faceLink.setAttribute("href", member.socialMedia.facebook);
+    facebook.appendChild(faceLink);
+    facebook.setAttribute("class", "facebook");
+    socialMedia.appendChild(facebook);
+
+    const linkedIn = document.createElement("li");
+    const linkLink = document.createElement("a");
+    linkLink.setAttribute("class", "social");
+    linkLink.setAttribute("href", member.socialMedia.linkedin);
+    linkedIn.appendChild(linkLink);
+    linkedIn.setAttribute("class", "linkedin");
+    socialMedia.appendChild(linkedIn);
+
+    name.textContent = member.name;
+    const website = document.createElement("a");
+    website.setAttribute("href", member.website);
+    website.setAttribute("class", "btn-get-started");
+    website.setAttribute("target", "_blank");
+    website.textContent = "Learn More";
+    img.setAttribute("src", member.logo);
+    img.setAttribute("alt", member.description);
+    img.setAttribute("loading", "lazy");
+    section.appendChild(img);
+    section.appendChild(name);
+    section.appendChild(description);
+
+    section.appendChild(socialMedia);
+    section.appendChild(website);
+    article.appendChild(section);
+  });
+}
+getMembers();
+
+const np = document.querySelector("#np");
+np.addEventListener("click", () => {
+  article.textContent = "";
+  displayMembers(
+    members.filter((startup) => {
+      return startup.membership.includes("NP Membership");
+    })
+  );
+});
+
+const bronze = document.querySelector("#bronze");
+bronze.addEventListener("click", () => {
+  article.textContent = "";
+  displayMembers(
+    members.filter((startup) => {
+      return startup.membership.includes("Bronze Membership");
+    })
+  );
+});
+
+const silver = document.querySelector("#silver");
+silver.addEventListener("click", () => {
+  article.textContent = "";
+  displayMembers(
+    members.filter((startup) => {
+      return startup.membership.includes("Silver Membership");
+    })
+  );
+});
+
+const gold = document.querySelector("#gold");
+gold.addEventListener("click", () => {
+  article.textContent = "";
+  displayMembers(
+    members.filter((startup) => {
+      return startup.membership.includes("Gold Membership");
+    })
+  );
+});
+
+const all = document.querySelector("#all");
+all.addEventListener("click", () => {
+  article.textContent = "";
+  getMembers();
 });
