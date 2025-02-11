@@ -1,5 +1,5 @@
-// Get the welcome message element
-const welcomeMessage = document.getElementById("welcome-message");
+const welcomeMessage =
+  document.getElementById("welcome-message") || document.createElement("div");
 
 // Get the last visit date from localStorage
 const lastVisitDate = localStorage.getItem("lastVisit");
@@ -17,7 +17,7 @@ if (!lastVisitDate) {
   const timeDiff = Math.floor((today_ - lastVisit) / (1000 * 60 * 60 * 24)); // Calculate days
 
   if (timeDiff < 1) {
-    welcomeMessage.textContent = "Back so soon! Awesome!";
+    welcomeMessage.textContent = "🙋🏾‍♂️Back so soon Awesome!";
   } else if (timeDiff === 1) {
     welcomeMessage.textContent = `You last visited ${timeDiff} day ago.`;
   } else {
@@ -65,6 +65,7 @@ function renderCalendar() {
   // Create blanks for days of the week before the first day
   for (let i = 0; i < firstDay; i++) {
     const blank = document.createElement("div");
+
     calendarDates.appendChild(blank);
   }
 
@@ -72,6 +73,9 @@ function renderCalendar() {
   for (let i = 1; i <= daysInMonth; i++) {
     const day = document.createElement("div");
     day.textContent = i;
+    if (i === 25) {
+      day.classList.add("event");
+    }
     calendarDates.appendChild(day);
   }
 }

@@ -1,5 +1,4 @@
 const links = document.querySelectorAll(".menu");
-
 links.forEach((link) => {
   link.addEventListener("click", (event) => {
     // Remove active class from all links
@@ -399,3 +398,42 @@ all.addEventListener("click", () => {
   article.textContent = "";
   getMembers();
 });
+
+// Success! We have the user's coordinates.
+const latitude = -11.66;
+const longitude = 27.47;
+
+const currentTemp = document.querySelector("#forecast-description");
+const weatherIcon = document.querySelector("#forecast-icon");
+const captionDesc = document.querySelector("#forecast-humidity");
+const windChill = document.querySelector("#forecast-wind");
+const apiKey = "0609f6b96504ef3e8683e2a1ba72a07f";
+
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
+
+async function apiFetch() {
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
+      displayResults(data);
+    } else {
+      throw Error(await response.text());
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function displayResults(data) {
+  currentTemp.innerHTML = `${data.main.temp}&deg;F data.weather[0].description`;
+
+  const iconsrc = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+  console.log(iconsrc);
+  weatherIcon.setAttribute("src", iconsrc);
+  weatherIcon.setAttribute("alt", data.weather[0].description);
+  captionDesc.textContent = `Humidity: ${data.main.humididy}%`;
+  windChill.textContent = `WindChill : ${data.wind.speed}`;
+}
+apiFetch();
