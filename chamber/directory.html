@@ -105,14 +105,20 @@
         </div>
       </section>
       <section class="directory">
-        <h2>Directory In Chamber</h2>
+        <h2>Welcome to the Luano Chamber of Commerce Directory</h2>
+
+        <div id="banner" style="display: none">
+          <span id="close-banner">❌</span>
+          <h3>🏅🥈🏆 Join one of the Rewarded Directory</h3>
+          <div id="spotlights"></div>
+        </div>
         <div class="card-directory">
           <div class="menu">
             <button id="grid">⏹️Grid</button>
             <button id="list">📄List</button>
           </div>
           <hr />
-          <article class="grid"></article>
+          <article class="grid grid-card"></article>
         </div>
       </section>
       <section id="pricing" class="pricing">
@@ -217,14 +223,14 @@
                     <img
                       id="forecast-icon"
                       width="50"
-                      src=""
+                      src="weather"
                       alt="Lubumbashi landscape"
                     />
                     <figcaption id="forecast-description"></figcaption>
                   </figure>
                 </li>
                 <li id="forecast-humidity"></li>
-                <li id="forecast-wind">Wind Chill: N/A</li>
+                <li id="forecast-wind"></li>
               </ul>
             </div>
           </div>
@@ -234,14 +240,14 @@
         <div class="footer-newsletter">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-lg-6">
+              <div class="col-lg-12">
                 <h4>Join Our Newsletter</h4>
                 <p>
                   Join our Newsletter for getting new updates about the business
                   trend
                 </p>
                 <form action="contact-us.html" method="post">
-                  <input type="email" name="email" />
+                  <input id="email" type="email" name="email" />
                   <input type="submit" value="Subscribe" />
                 </form>
               </div>
