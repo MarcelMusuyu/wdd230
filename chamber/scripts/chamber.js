@@ -427,13 +427,13 @@ async function apiFetch() {
 }
 
 function displayResults(data) {
-  currentTemp.innerHTML = `${data.main.temp}&deg;F data.weather[0].description`;
+  currentTemp.innerHTML = `${data.main.temp}&deg;F ${data.weather[0].description}`;
 
   const iconsrc = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-  console.log(iconsrc);
+
   weatherIcon.setAttribute("src", iconsrc);
   weatherIcon.setAttribute("alt", data.weather[0].description);
-  captionDesc.textContent = `Humidity: ${data.main.humididy}%`;
+  captionDesc.textContent = `Humidity: ${data.main.humidity}%`;
   windChill.textContent = `WindChill : ${data.wind.speed}`;
 }
 apiFetch();
