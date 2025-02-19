@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
 
 :root {
   --primary-color: #012a4a;
@@ -1544,6 +1544,7 @@ form {
   line-height: 1.5;
   color: #212529;
   text-align: center;
+  margin-top: 15px;
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
@@ -1579,5 +1580,40 @@ form {
   padding: 6px;
 }
 .event-attraction::before {
-  content: "✔";
+  content: "🧿";
+}
+
+.event-attraction {
+  vertical-align: text-top;
+  margin: 25px;
+  line-height: 10px;
+}
+.event-attraction::first-letter {
+  font-variant-caps: titling-caps;
+}
+
+/*
+   Styling the banner
+*/
+
+/* CSS for styling (basic example) */
+.spotlight {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.spotlights {
+  display: flex;
+  flex-wrap: wrap;
+}
+#banner {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#close-banner {
+  float: right;
+  cursor: pointer;
 }
