@@ -6,7 +6,7 @@
     justify-content: space-between;
   }
   .navigation li {
-    display: block; /* change state in small view */
+    display: block;
     flex: 1 1 100%;
   }
   .navigation a {
@@ -23,26 +23,11 @@
   .container-sider {
     grid-template-columns: 1fr;
   }
-
-
-  /* .sidebar {
-    display: flex;
-    justify-content: space-between;
-  } */
-  /* .membership {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto; 
-  } */
 }
 
-/* Mobile View */
 @media screen and (max-width: 768px) {
   .events {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(150px, 1fr)
-    ); /* Adjust column width for smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
   .sidebar {
     display: block;
@@ -57,7 +42,8 @@
     flex: 0 0 auto;
     width: 33.33333333%;
   }
-  .card-directory .grid,.socialMedia {
+  .card-directory .grid,
+  .socialMedia {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
