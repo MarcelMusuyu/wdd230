@@ -827,18 +827,17 @@ footer {
 
 .container-sider {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   padding: 20px;
 }
 
 .sidebar {
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: 330px 330px 330px 310px;
+  gap: 5px;
   border-radius: 5px;
 }
 
@@ -851,7 +850,6 @@ footer {
   background-color: #01111d;
   padding-bottom: 20px;
   font-size: 30px;
-  grid-column: 1/5;
 }
 
 .content {
@@ -952,7 +950,7 @@ footer {
 
   display: grid;
   grid-template-rows: 1fr;
-  grid-gap: 5px;
+  grid-gap: 2px;
   place-items: center;
 }
 .check h3 {
@@ -1433,19 +1431,19 @@ form {
   border: 1px solid #ececec;
   border-radius: 6px;
   margin-top: 10px;
-  padding: 30px;
+  padding: 10px;
   position: relative;
   z-index: 9;
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 90%;
 }
 
 .feature-icon {
   margin-right: 15px;
   font-size: 30px;
-  width: 105px;
+  width: 100px;
   border-radius: 100px;
-  height: 105px;
+  height: 100px;
 
   display: -webkit-flex;
   display: -ms-flex;
@@ -1525,6 +1523,7 @@ form {
 .row-sm {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
 }
 .luano-profil {
   height: 200px;
@@ -1563,6 +1562,7 @@ form {
   font-size: 13px;
   text-align: center;
   display: block;
+  width: 100%;
   font-weight: 500;
   padding: 6px;
 }
@@ -1572,9 +1572,11 @@ form {
   border: 2px solid #1e88e5;
   text-align: center;
   display: block;
+  width: 100%;
   font-weight: 500;
   padding: 6px;
 }
+
 .event-attraction::before {
   content: "🧿";
 }

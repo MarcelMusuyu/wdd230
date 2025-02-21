@@ -43,7 +43,8 @@
     width: 33.33333333%;
   }
   .card-directory .grid,
-  .socialMedia {
+  .socialMedia,
+  .sidebar,.mb-0,.row-sm  {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
